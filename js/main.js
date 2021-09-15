@@ -1,60 +1,12 @@
-/* function meuEscopo() {
-    const form = document.querySelector('.form'); // selecionando a class form
-    const resultado = document.querySelector('.resultado')
-
-    const pessoaPeso = [];
-
-    function recebeEventoForm(evento) {
-        evento.preventDefault();
-        const peso = form.querySelector('.peso');
-        const altura = form.querySelector('.altura');
-
-        pessoaPeso.push({ // criando os objetos, dentro da array
-            peso: peso.value,
-            altura: altura.value
-        });
-
-        console.log(pessoaPeso); // faz aparecer no console log do navegador
-
-        resultado.innerHTML += `<p> Resultado: ${peso.value} ${altura.value}</p>`; // vai adicionar esses elementos no body na pagina
-
-    }
-    form.addEventListener('submit', recebeEventoForm);
-
-    function calcularImc(resultado) {
-        if (resultado < 18.5) {
-            console.log("abaixo do peso");
-        } else if (resultado >= 18.5 && resultado <= 24.9) {
-            console.log("Peso Normal");
-        } else if (resultado >= 25 && resultado <= 29.9) {
-            console.log("Sobre Peso");
-        } else if (resultado >= 30 && resultado <= 34.9) {
-            console.log("Obesidade grau 1");
-        } else if (resultado >= 35 && resultado <= 39.9) {
-            console.log("Obesidade grau 2");
-        } else if (resultado >= 40) {
-            console.log("Obesidade grau 3");            
-        } else {
-            console.log("Peso invalido");
-        }
-    }
-
-}
-
-meuEscopo(); 
-
-*****************************************************/
 
 const form = document.querySelector('.form');
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    /* console.log("Evento previnido");
-    setResultado('ola'); */
     const inputPeso = e.target.querySelector('.peso') // qual elemento foi clicado na pagina
     const inputAltura = e.target.querySelector('.altura') // qual elemento foi clicado na pagina
 
-    const peso = Number(inputPeso.value); // pegando realmente o valor do peso
+    const peso = Number(inputPeso.value); // 
     const altura = Number(inputAltura.value);
 
     if (!peso) {
